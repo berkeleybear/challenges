@@ -1,0 +1,33 @@
+var mostRepeats = function(input){
+  
+  var output = [];
+  var maxSoFar = [];
+  var wordArr = input.toLowerCase().split(" ");
+  wordArr.forEach(function(word, i){
+    var letters = wordArr[i].split("");
+    var letterCounts = new Object;
+    letters.forEach(function(letter, j){
+      letterCounts[letter] = letterCounts[letter]? letterCounts[letter] + 1 : 1;
+    });
+    var letterCountInWord = [];
+    for (var key in letterCounts) {
+      letterCountInWord.push(letterCounts[key]);
+    }
+    maxSoFar[i] = letterCountInWord.sort()[letterCountInWord.length-1];
+  });
+  
+  
+  var maxRepeated = maxSoFar[0];
+  maxSoFar.forEach(function(count, k){
+    maxRepeated = count > maxRepeated? count:maxRepeated;
+  });
+
+  maxSoFar.forEach(function(element, n){
+    if(maxRepeated === maxSoFar[n]){
+      output.push(wordArr[n]);
+    }
+  })
+  return output
+}
+
+console.log(mostRepeats('aa aaa a s ds rreee e w d f g hhh j k u g'));
