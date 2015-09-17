@@ -1,0 +1,24 @@
+{
+  "name": "challenges",
+  "version": "1.0.0",
+  "description": "a collection of challenges I took on at Coding House",
+  "main": "calcParseLeftToRight.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkeleybear/challenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkeleybear/challenges/issues"
+  },
+  "homepage": "https://github.com/berkeleybear/challenges#readme",
+  "dependencies": {
+    "md5": "^2.0.0",
+    "request": "^2.61.0"
+  }
+}
